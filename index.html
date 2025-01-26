@@ -1,28 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-        }
-        h1 {
-            margin-top: 50px;
-        }
-        p {
-            font-size: 1.2em;
-        }
-    </style>
+    <title>张三的个人主页</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Personal Website!</h1>
-    <p>This is a simple website hosted on GitHub Pages.</p>
+    <header>
+        <div class="container">
+            <h1>张三</h1>
+            <p>计算机科学研究生</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#research">研究项目</a></li>
+                    <li><a href="#publications">发表论文</a></li>
+                    <li><a href="#blog">博客</a></li>
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2>关于我</h2>
+        <img src="images/profile.jpg" alt="张三的头像" class="profile-img">
+        <p>我是张三，目前在某某大学攻读计算机科学硕士学位。我的研究兴趣包括机器学习、数据挖掘和自然语言处理。</p>
+        <p>我热衷于探索新技术，并将它们应用到实际问题中。在我的空闲时间，我喜欢阅读、编程和旅行。</p>
+    </section>
+
+    <section id="research" class="container">
+        <h2>研究项目</h2>
+        <ul>
+            <li>
+                <h3>项目一：基于深度学习的图像分类</h3>
+                <p>该项目旨在利用深度学习技术提高图像分类的准确性。我们使用了卷积神经网络（CNN）和迁移学习的方法。</p>
+            </li>
+            <li>
+                <h3>项目二：社交媒体情感分析</h3>
+                <p>该项目分析了社交媒体上的用户评论，使用自然语言处理技术进行情感分析，并生成情感趋势报告。</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="publications" class="container">
+        <h2>发表论文</h2>
+        <ul>
+            <li>
+                <h3>论文一：深度学习在图像分类中的应用</h3>
+                <p>张三, 李四. (2022). 深度学习在图像分类中的应用. <em>计算机科学期刊</em>, 45(3), 123-130.</p>
+            </li>
+            <li>
+                <h3>论文二：社交媒体情感分析技术综述</h3>
+                <p>张三, 王五. (2021). 社交媒体情感分析技术综述. <em>人工智能研究</em>, 38(2), 89-102.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="blog" class="container">
+        <h2>博客</h2>
+        <ul>
+            <li><a href="blog/post1.html">深度学习入门指南</a></li>
+            <li><a href="#">如何提高论文写作效率</a></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>联系我</h2>
+        <p>如果你对我的研究感兴趣，或者有任何问题，欢迎通过以下方式联系我：</p>
+        <ul>
+            <li>邮箱: <a href="mailto:zhangsan@example.com">zhangsan@example.com</a></li>
+            <li>GitHub: <a href="https://github.com/zhangsan">zhangsan</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/zhangsan">张三</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 张三. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
