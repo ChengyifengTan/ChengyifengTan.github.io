@@ -1,78 +1,1066 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>张三的个人主页</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <title>Yuan Yuan's Homepage</title>
+  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <!--<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.7.5-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
+  <link href='css/style.css?_t=20200916' rel='stylesheet' type='text/css'>
+  <script defer src="font-awesome-5.9.0/js/brands.min.js"></script>
+  <script defer src="font-awesome-5.9.0/js/fontawesome.min.js"></script>
+    <style>
+      .red {
+        color: #ff0000;
+/*        color: #D70000;*/
+        font-style: normal;
+      }
+       
+      #intro {
+       margin-top: 0.2em !important;
+      }
+      
+      .content h3 {
+       margin-bottom: 1em!important;
+       margin-top: 2.5em!important;
+      }
+
+      .content figure {
+       width: 90%;
+       display: flex;
+       align-items: center;
+       overflow: hidden;
+       margin-left: auto!important;
+       margin-right: auto!important;
+      }
+      
+      .columns:not(:last-child) {
+       margin-bottom: 1.75rem!important;
+      }
+
+      #sidebar {
+        width: 80%;
+      }
+
+      /* #sidebar .menu-list a.is-active {
+        background-color: #9dd5d8;
+      } */
+
+      @media screen and (min-width: 769px), print {
+        .column.is-2_5, .column.is-2-tablet {
+          flex: none;
+          width: 20%;
+        }
+      }
+
+      .next-element-vertical-align-middle+span{
+        vertical-align: middle;
+      }
+
+      .next-element-vertical-align-text-top+span{
+        vertical-align: text-top;
+      }
+
+      .vertical-align-text{
+        vertical-align: text-bottom;
+      }
+
+      .partial-visible li:nth-child(n+20){
+        display: none;
+      }
+
+      .partial-visible .show-more:nth-child(n+21){
+        display: block!important;
+      }
+      .news-list:not(.partial-visible) .show-more{
+        display: block!important;
+      }
+</style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
-    <header>
-        <div class="container">
-            <h1>张三</h1>
-            <p>计算机科学研究生 | 某某大学</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">关于我</a></li>
-                    <li><a href="#research">研究</a></li>
-                    <li><a href="#publications">论文</a></li>
-                    <li><a href="#contact">联系</a></li>
-                </ul>
-            </nav>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-2_5">
+          <div class="sticky">
+            <figure class="image" style="width: 10rem;max-width: 100%;">
+              <img class="is-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=" id="avatar">
+            </figure>
+            <div class="content">
+              <h3 style="margin-top: 1em">Yuan Yuan 袁园</h3>
+              <h6>Assistant Professor</h6>
+              <h6>Deptment of Computer Science</h6>
+              <h6>Boston College</h6>
+              <h6>Room 528E, 245 Beacon St., Chestnut Hill, MA 02467</h6>
+            </div>
+
+            <!-- details -->
+            <div class="details">
+              <h3>Emails:</h3>
+              <p><a href="mailto:yuanyua@bc.edu">yuanyua[at]bc[dot]edu</a></p>
+              <p><a href="mailto:miayuan@mit.edu" style="text-decoration: line-through;">miayuan[at]mit[dot]edu</a></p>
+              <p><a href="mailto:miayuany@gmail.com">miayuany[at]gmail[dot]com</a></p>
+            </div>
+            <!-- social network icons -->
+            <div class="social">
+              <a href="https://github.com/yyuanad" target="_blank">
+                <span class="fab fa-github fa-2x" style="display:inline; text-decoration: none"></span>
+              </a>
+              <a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">
+                <span class="fab fa-google fa-2x" style="display:inline; text-decoration: none"></span>
+              </a>
+              <a href="https://www.linkedin.com/in/yuan-yuan-96451747/" target="_blank">
+                <span class="fab fa-linkedin fa-2x" style="display:inline; text-decoration: none"></span>
+              </a>
+              <a href="https://twitter.com/YuanYuan_MIT" target="_blank">
+                <span class="fab fa-twitter fa-2x" style="display:inline; text-decoration: none"></span>
+              </a>
+            </div>
+
+
+            <div id="sidebar" class="menu sticky is-hidden-mobile">
+              <p class="menu-label"><b>Quick Links</b></p>
+              <ul class="menu-list">
+                <li><a href="#intro">About Me</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#press">Press</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#miscellaneous">Miscellaneous</a></li>
+              </ul>
+              <div class="column" style="width: 40%">
+                <script type='text/javascript' id='clstr_globe' src='//cdn.clustrmaps.com/globe.js?d=VjnfOejvIIrpggl9NSOiRcw0OJHJ0QGzEhq2kCXwP94' async></script>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
-    </header>
+        <div class="column right-panel">
+          <div class="content">
 
-    <section id="about" class="container">
-        <h2>关于我</h2>
-        <img src="images/profile.jpg" alt="张三的头像" class="profile-img">
-        <p>我是张三，目前在某某大学攻读计算机科学硕士学位。我的研究兴趣包括机器学习、数据挖掘和自然语言处理。</p>
-        <p>我热衷于探索新技术，并将它们应用到实际问题中。在我的空闲时间，我喜欢阅读、编程和旅行。</p>
-    </section>
 
-    <section id="research" class="container">
-        <h2>研究</h2>
-        <ul>
-            <li>
-                <h3>项目一：基于深度学习的图像分类</h3>
-                <p>该项目旨在利用深度学习技术提高图像分类的准确性。我们使用了卷积神经网络（CNN）和迁移学习的方法。</p>
-            </li>
-            <li>
-                <h3>项目二：社交媒体情感分析</h3>
-                <p>该项目分析了社交媒体上的用户评论，使用自然语言处理技术进行情感分析，并生成情感趋势报告。</p>
-            </li>
-        </ul>
-    </section>
+            <!--About Me-->
+            <h3 id="intro">About Me</h3>
+            <p>I am a Tenure-Track Assistant Professor in the Department of Computer Science at <a href="https://www.bc.edu/" target="_blank">Boston College</a>. 
 
-    <section id="publications" class="container">
-        <h2>论文</h2>
-        <ul>
-            <li>
-                <h3>论文一：深度学习在图像分类中的应用</h3>
-                <p>张三, 李四. (2022). 深度学习在图像分类中的应用. <em>计算机科学期刊</em>, 45(3), 123-130.</p>
-            </li>
-            <li>
-                <h3>论文二：社交媒体情感分析技术综述</h3>
-                <p>张三, 王五. (2021). 社交媒体情感分析技术综述. <em>人工智能研究</em>, 38(2), 89-102.</p>
-            </li>
-        </ul>
-    </section>
+              Previously, I was a Postdoctoral Research Associate at <a href="https://www.csail.mit.edu/" target="_blank">Computer Science & Artificial Intelligence Lab</a>
+              of <a href="http://www.mit.edu/" target="_blank">Massachusetts Institute of Technology</a>, working with Prof. <a href="http://people.csail.mit.edu/dina/" target="_blank">Dina Katabi</a>.
+              Before MIT, I received my Ph.D. degree in <a href="https://ece.hkust.edu.hk/" target="_blank">Department of Electronic & Computer Engineering</a>, <a href="http://www.ust.hk/" target="_blank">Hong Kong University of Science and Technology</a>. I was very fortunate to have Prof. <a href="https://sites.google.com/view/dyyeung" target="_blank">Dit-Yan Yeung</a> as my advisor.
+              I was a visiting research scholar in <a href="https://www.ri.cmu.edu/" target="_blank">The Robotics Institute</a> of <a href="http://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>, working with Prof. <a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a>.
 
-    <section id="contact" class="container">
-        <h2>联系</h2>
-        <p>如果你对我的研究感兴趣，或者有任何问题，欢迎通过以下方式联系我：</p>
-        <ul>
-            <li>邮箱: <a href="mailto:zhangsan@example.com">zhangsan@example.com</a></li>
-            <li>GitHub: <a href="https://github.com/zhangsan">zhangsan</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/zhangsan">张三</a></li>
-        </ul>
-    </section>
+            </p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 张三. 保留所有权利。</p>
+            <p>
+            I am a <a href="https://innovation.mit.edu/wisdm-speaker/yuan-yuan/" target="_blank">WISDM speaker</a> in <a href="https://innovation.mit.edu/" target="_blank">MIT Office of Innovation</a>. I am passionate about fostering STEM community diversity, equity, and inclusion through speaking, mentoring, teaching, academic collaborations, and outreach. 
+            </p>
+
+            <!-- <em class="red"><b>Recruiting:</b> </em> -->
+
+            <h4><span>🔥🔥🔥</span><em class="red"><b> Recruiting:</b></em></h4>
+
+            <!-- I am recruiting postdocs as well as interns, RAs, and visiting students. Send me an email if you are interested in working with me.</em> I warmly welcome anyone interested in collaborating or discussing research with me, whether remotely or in person. -->
+
+            <p>
+            <b>Prospective students:</b> I am currently seeking multiple highly motivated students to join my lab as postdocs, PhDs (2026), masters (2026), undergrades, and visitors (in-person or remote). If interested, please complete this <a href="https://forms.gle/L5v4rcouGkE6B4pV6" target="_blank"><b>Google form</b></a> and contact <a href="mailto:miayuanmit@gmail.com">miayuanmit@gmail.com</a> (cc <a href="mailto:yuanyua@bc.edu">yuanyua@bc.edu</a>). 
+            </p>
+
+<!--             <p class="tight-spacing">
+            <b>Preferred skills:</b>
+            <ul>
+            <li>Curious, driven, independent, and passionate</li>
+            <li>A clear research vision</li>
+            <li>Strong coding, research, and engineering skills</li>
+            <li>Excellent verbal and written communication skills</li>
+            </ul>
+            </p>
+ -->
+
+            <p>
+            <h4><b>Research Interests:</b></h4>
+            <!-- I aim at developing bleeding-edge machine learning and AI techniques to address a range of real-world challenges, which include but are not limited to: -->
+            <!-- I conduct research in machine learning and its applications, which include but are not limited to: -->
+            
+            <ul>
+            <li><b>Multisensory AI & Generative AI:</b> the development of bleeding-edge AI techniques aims to comprehend and make meaningful use of various data modalities, such as vision, Artificial Intelligence of Things (AIoT), language (including LLMs), and medical data, etc. </li>
+            <li><b>AI for medicine, health, science:</b> new digital biomarker discovery, contactless health monitoring, etc., to advance personalized medicine.
+             <!-- of patients with Parkinson's, Alzheimer's, mental health, etc. </li> -->
+            <!-- <li><b>Computer Vision:</b> human-centered AI, such as human behavior and daily activities understanding.</li> -->
+            <li><b>Trustworthy & Safe AI:</b> e.g., interpretability, robustness, alignment, etc. </li>
+            </ul>
+
+            </p>      
+
+
+            <!--News-->
+            <h3 id="news">
+              News
+            </h3>
+            <ul class="partial-visible news-list">
+              <li><span>[07/2024] One paper has been accepted by Nature Nanotechnology</span></a>.</li>
+              <li><span>[04/2024] We are thrilled to have <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank">Hao He</a> from MIT EECS present a talk entitled <a href="talk/202404_HaoHe_Health.png" target="_blank"><span style="color: #33A6B8;">"Respiration Intelligence: Know Your Health from Your Breathing with an AI Assistant"</span></a>.</li>
+              <li><span>[04/2024] We are thrilled to have <a href="https://hanzimao.me/" target="_blank">Hanzi Mao</a> from Nvidia Deep Imagination Research present a talk entitled <a href="talk/202404_HanziMao_SAM.png" target="_blank"><span style="color: #33A6B8;">"Segment Anything"</span></a>.</li>
+              <li><span>[04/2024] We are thrilled to have <a href="https://ghli.org/" target="_blank">Guohao Li</a> from University of Oxford present a talk entitled <a href="talk/202404_GuohaoLi_Agent.png" target="_blank"><span style="color: #33A6B8;">"CAMEL: Communicative Agents for “Mind” Exploration of Large Language Model Society"</span></a>.</li>
+              <li><span>[04/2024] We are thrilled to have <a href="https://vivianszf.github.io/" target="_blank">Zifan Shi</a> from Stanford / HKUST present a talk entitled <a href="talk/202404_ZifanShi_3D.png" target="_blank"><span style="color: #33A6B8;">"Towards Efficient and High-Quality 3D Generation"</span></a>.</li>
+              <li><span>[04/2024] We are thrilled to have <a href="https://www.episodeyang.com/" target="_blank">Ge Yang</a> from MIT CSAIL present a talk entitled <a href="talk/202404_GeYang_Robotics.png" target="_blank"><span style="color: #33A6B8;">"Foundation Priors for Robot Perception: From Neural Radiance Fields to OpenAI Sora"</span></a>.</li>
+              <li><span>[04/2024] We are thrilled to have <a href="https://www.tianhongli.me/" target="_blank">Tianhong Li</a> from MIT CSAIL present a talk entitled <a href="talk/202404_TianhongLi_MAGE.png" target="_blank"><span style="color: #33A6B8;">"Learning to and from Predict in Computer Vision"</span></a>.</li>
+              <li><span>[04/2024] We are thrilled to have <a href="https://chunyuan.li/" class="stafflink" target="_blank">Chunyuan Li</a> from Microsoft Research present a talk entitled <a href="talk/202404_ChunyuanLi_VLM.png" target="_blank"><span style="color: #33A6B8;">"LLaVA: A Vision-and-Language Approach to Computer Vision in the Wild"</span></a>.</li>
+              <li><span>[01/2024] Our paper <a href="https://yyuanad.github.io/">"Continuous Invariance Learning"</a> has been accepted to ICLR 2024.</li>
+              <li><span>[01/2024] I join the Dept. of Computer Science as a Tenure-Track Assistant Professor at <a href="https://www.bc.edu/" target="_blank">Boston College</a>.</li>
+              <li><span>[12/2023] I attend the <a href="https://nips.cc/" target="_blank">NeurIPS</a> conference in New Orleans, USA.</li>
+              <li><span>[11/2023] I was invited to give a guest lecture for the <a href="https://yyuanad.github.io/" target="_blank">COMP5511 Artificial Intelligence Concepts</a> course at Hong Kong Polytechnic University in the Fall of 2023. </li>
+              <li><span>[10/2023] I attend the <a href="https://iccv2023.thecvf.com/" target="_blank">ICCV</a> conference in Paris, France.</li>
+              <li><span>[07/2023] Our paper <a href="https://arxiv.org/pdf/2209.00383.pdf" target="_blank">"TokenCut: Segmenting Objects in Images and Videos with Self-supervised Transformer and Normalized Cut"</a> has been accepted to TPAMI.</li>
+              <li><span>[05/2023] I was honored to be invited to give a guest lecture for the <a href="http://bulletin.engineering.nyu.edu/preview_course_nopop.php?catoid=15&coid=38006" target="_blank">ROB-UY 3203 Robot Vision</a> course at New York University in the Spring of 2023.</li>
+              <li><span>[01/2023] <a href="https://www.nature.com/articles/s41591-022-01932-x" target="_blank">AI-based biomarker for Parkinson's disease</a> has been selected to <a href="papers/Notable_Advances_2022.pdf" target="_blank"><em class="red"><b>Notable Advances 2022</b></em></a> by Nature Medicine, as <em class="red"><b>one of the ten</b></em> global <em class="red"><b>breakthroughs</b></em> and <em class="red"><b>critical developments</b></em> that moved medicine forward in 2022. Notable Advances 2022 are selected from all the papers of Nature, Science, Lancet, New England Journal of Medicine and their subsidiary journals, and all the reports of the World Health Organization (WHO)</b>.</li>
+              <li><span>[01/2023] I co-organized <em class="red"><b>workshop @ ICLR 2023</b></em> -- <a href="https://sites.google.com/eng.ucsd.edu/mliot/" target="_blank">Machine Learning for IoT: Datasets, Perception, and Understanding.</a></li>
+              <li><span>[10/2022] Attended the <a href="https://conferences.nature.com/event/0b87c6fb-30cf-495a-9da0-88b2a9bf0681/summary" target="_blank">Nature Conference on Medicine in a Virtual Age.</a></li>
+              <li><span>[08/2022] Our paper on <a href="https://www.nature.com/articles/s41591-022-01932-x" target="_blank">AI-based biomarker for Parkinson's disease</a> is published at <em class="red"><b>Nature Medicine</b></em>.</li>
+              <li><span>[04/2022] Our poster has been accepted at <a href="https://www.mitmgb.ai/" target="_blank">AI Cures 2022.</a></li>
+              <!-- <li><span>[04/2022] <a href="https://www.m-psi.fr/Papers/TokenCut2022/" target="_blank">TokenCut</a> is accepted at <a href="https://sites.google.com/view/l3d-ivu/" target="_blank">L3DIVU</a> workshop, CVPR 2022.</span></li> -->
+              <li><span>[03/2022] <a href="https://www.m-psi.fr/Papers/TokenCut2022/" target="_blank">TokenCut</a> and <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Targeted_Supervised_Contrastive_Learning_for_Long-Tailed_Recognition_CVPR_2022_paper.pdf" target="_blank">TSC</a> have been accepted at CVPR 2022.</span></li>
+	      <li><span>[02/2022] Our paper <a href="https://arxiv.org/pdf/2202.11539.pdf" target="_blank">"Self-Supervised Transformers for Unsupervised Object Discovery using Normalized Cut"</a> is on arXiv.</span></li>    
+              <li><span>[11/2021] Our paper <a href="https://arxiv.org/abs/2111.13998.pdf" target="_blank">"Targeted Supervised Contrastive Learning for Long-Tailed Recognition"</a> is on arXiv.</span></li>    
+	      <li><span>[10/2021] Attended <a href="https://researchsummit.microsoft.com/" target="_blank">Microsoft Research Summit 2021</a>, virtually.</span></li>
+              <li><span>[10/2021] Our paper <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Li_Unsupervised_Learning_for_Human_Sensing_Using_Radio_Signals_WACV_2022_paper.pdf" target="_blank">"Unsupervised Learning for Human Sensing Using Radio Signals"</a> has been accepted at <a href="https://wacv2022.thecvf.com/home" target="_blank">WACV 2022</a>.</span></li> 
+              <li><span>[12/2020] Our paper <a href="https://arxiv.org/pdf/2012.09962.pdf" target="_blank">"Addressing Feature Suppression in Unsupervised Visual Representations"</a> is on arXiv.</span></li>
+              <li><span>[11/2020] Attended <a href="https://oge.mit.edu/development/pop/" target="_blank">Path of Professorship workshop</a>, MIT, virtually.</span></li>
+              <li><span>[09/2020] Our paper "Subgroup-based Rank-1 Lattice Quasi-Monte Carlo" has been accepted at NeurIPS 2020.</span></li>
+              <li><span>[08/2020] <b>RF-Diary</b> was covered by:
+                <a href="https://techcrunch.com/2020/08/24/mit-wireless-system-can-monitor-what-care-facility-residents-are-doing-while-preserving-privacy/" target="_blank">TechCrunch</a>,
+                <a href="https://www.engadget.com/mit-wireless-signals-monitoring-machine-learning-rf-diary-040049578.html" target="_blank">Engadget</a>,
+                <a href="https://venturebeat.com/2020/08/24/mit-csails-rf-diary-monitors-people-through-walls-and-in-total-darkness/" target="_blank">VentureBeat</a>,
+                <a href="https://www.dailymail.co.uk/sciencetech/article-8665391/AI-device-nursing-homes-monitor-elderly-residents-using-radio-waves.html" target="_blank">DailyMail</a>,
+                <a href="https://hothardware.com/news/mit-project-can-track-people-through-walls-and-darkness" target="_blank">Hot Hardware</a>,
+                <a href="https://mms.tveyes.com/MediaCenterPlayer.aspx?u=aHR0cDovL21lZGlhY2VudGVyLnR2ZXllcy5jb20vZG93bmxvYWRnYXRld2F5LmFzcHg/VXNlcklEPTMwMzQ3OCZNRElEPTEzNzExMTM5Jk1EU2VlZD0yNTU0JlR5cGU9TWVkaWE%3D" target="_blank">BBC News</a>,
+                <a href="https://www.csail.mit.edu/news/device-nursing-homes-can-monitor-residents-activities-permission-and-without-video" target="_blank">MIT CSAIL News</a>, and other media outlets.</span></li>
+              <li><span>[07/2020] <a href="http://rf-diary.csail.mit.edu/" target="_blank">RF-Diary</a> has been accepted at ECCV 2020 as an oral presentation.</span></li>
+              <li><span>[06/2020] <b>RF-ReID</b> was covered by:
+                <a href="https://techcrunch.com/2020/06/16/mits-new-way-to-remotely-monitor-vital-signs-over-time-could-help-with-early-covid-19-detection-in-care-homes/" target="_blank">TechCrunch</a>,
+                <a href="https://www.yahoo.com/lifestyle/mits-way-remotely-monitor-vital-132517815.html" target="_blank">Yahoo News</a>,
+                <a href="https://www.healthcareitnews.com/news/mit-csail-machine-learning-tool-could-help-nursing-homes-predict-covid-19" target="_blank">Healthcare IT News</a>,
+                <a href="https://www.csail.mit.edu/news/home-health-device-uses-wireless-signals-identify-person-its-seen" target="_blank">MIT CSAIL News</a>, and other media outlets.</span></li>
+              <li><span>[02/2020] <a href="http://rf-reid.csail.mit.edu/" target="_blank">RF-ReID</a> has been accepted at CVPR 2020.</span></li>
+                <a href="javascript:void(0);" class="show-more" style="font-style: italic; display: none;">show more</a>
+            </ul>
+
+
+            <!--Selected Publications-->
+            <h3 id="publications">Selected Publications <span style="font-size: 1rem;margin-left: 1rem;position: relative;bottom: .1rem;"><a href="https://scholar.google.com/citations?user=9tI89HMAAAAJ" target="_blank">[Full List]</a></span></h3> 
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2024_iclr.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Continous Invariance Learning</b><br>
+                    <a href="https://linyongver.github.io/Website/" target="_blank" class="dark">Yong Lin*</a>, <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&user=xw3apboAAAAJ" target="_blank" class="dark">Fan Zhou*</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=yeJ3AbsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="dark">Lu Tan</a>, <a href="https://scholar.google.com/citations?hl=en&user=TWDXDhYAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="dark">Lintao Ma</a>, <a href="https://www.jmliu.site/publications/" target="_blank" class="dark">Jiameng Liu</a>, <a href="https://openreview.net/profile?id=~Yansu_HE1" target="_blank" class="dark">Yansu He</a>, <b>Yuan Yuan</b>, <a href="https://openreview.net/profile?id=~Yu_Liu28" target="_blank" class="dark">Yu Liu</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=Ywakh_sAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="dark">James Zhang</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&user=4gH3sxsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="dark">Yujiu Yang</a>, and <a href="http://www.wanghao.in/index.html" target="_blank" class="dark">Hao Wang</a><br>
+                    (* indicates equal contribution)<br>
+                    <i>International Conference on Learning Representations (<b>ICLR</b>), 2024</i><br>
+                    <a href="https://openreview.net/pdf?id=70IgE3tRbu" target="_blank">[PDF]</a>
+                    <a href="bib/2024_iclr.bib" target="_blank">[BibTeX]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2022_RF_Oximeter.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Contactless Oxygen Monitoring with Radio Waves and Gated Transformer</b><br>
+                    <a href="http://people.csail.mit.edu/hehaodele/" target="_blank" class="dark">Hao He*</a>, <b>Yuan Yuan*</b>, <a href="https://www.yingcong.me/" target="_blank" class="dark">Ying-Cong Chen*</a>, <a href="https://scholar.google.com/citations?user=UlaXT00AAAAJ&hl=en" target="_blank" class="dark">Peng Cao</a> and <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a><br>
+                    (* indicates equal contribution, order determined via a random coin flip)<br>
+                    <!-- <i>NeurIPS Workshop on Learning from Time Series for Health, Neural Information Processing Systems (<b>NeurIPS</b>), 2022</i><br> -->
+                    <i>Machine Learning for Healthcare (<b>MLHC</b>), 2023</i><br>
+                    <a href="https://static1.squarespace.com/static/59d5ac1780bd5ef9c396eda6/t/64d1ae4e9ec2f716e2b764ea/1691463248033/ID162_Research+Paper_2023.pdf" target="_blank">[MLHC Version]</a>
+                    <a href="papers/paper_2022_neurips_TS4H.pdf" target="_blank">[NeurIPSw Version]</a>
+                    <a href="bib/2023_mlhc_oxygen.bib" target="_blank">[BibTeX]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2022_PD_nature_medicine.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Artificial Intelligence-Enabled Detection and Assessment of Parkinson's Disease using Nocturnal Breathing Signals</b><br>
+                    <a href="https://www.mit.edu/~yuzhe/" target="_blank" class="dark">Yuzhe Yang<i class="email"></i></a>, <b>Yuan Yuan</b><i class="email"></i>, <a href="https://scholar.google.com/citations?hl=en&user=jfWZH3cAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="dark">Guo Zhang</a>, <a href="http://www.wanghao.in/" target="_blank" class="dark">Hao Wang</a>, <a href="https://www.yingcong.me/" target="_blank" class="dark">Ying-Cong Chen</a>, <a href="http://yingchengliu.com/" target="_blank" class="dark">Yingcheng Liu</a>, <a href="https://www.urmc.rochester.edu/people/23572607-christopher-g-tarolli" target="_blank" class="dark">Christopher Tarolli</a>, <a href="https://www.mayo.edu/research/labs/bioelectronics-neurophysiology-engineering/faculty-staff" target="_blank" class="dark">Daniel Crepeau</a>, <a href="https://www.linkedin.com/in/jan-bukartyk-51874032/" target="_blank" class="dark">Jan Bukartyk</a>, <a href="https://www.mayoclinic.org/biographies/junna-mithri-m-d/bio-20055306" target="_blank" class="dark">Mithri Junna</a>, <a href="https://www.massgeneral.org/doctors/19418/aleksandar-videnovic" target="_blank" class="dark">Aleksandar Videnovic</a>, <a href="https://www.bu.edu/sargent/profile/terry-ellis-pt-phd-ncs/" target="_blank" class="dark">Terry Ellis</a>, <a href="https://www.mayoclinic.org/biographies/lipford-melissa-c-m-d/bio-20055552" target="_blank" class="dark">Melissa Lipford</a>, <a href="https://www.urmc.rochester.edu/people/26764214-earl-ray-dorsey" target="_blank" class="dark">Ray Dorsey</a>, <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a> 
+(<i class="email"></i> indicates corresponding authors: <a href="mailto:yuzhe@mit.edu">yuzhe@mit.edu</a>; <a href="mailto:miayuan@mit.edu">miayuan@mit.edu</a>)<br>
+                    <i><b>Nature Medicine</b> (2022)</i> &nbsp; &nbsp; 
+                    <em class="red"><i>2-year Impact Factor: 87.241</i></em> &nbsp; &nbsp;       
+                    <em class="red"><i>5-year Impact Factor: 68.310</i></em> <br> 
+                    <a href="https://www.nature.com/articles/s41591-022-01932-x" target="_blank">[Paper]</a>
+                    <a href="https://pd-breathing.csail.mit.edu/" target="_blank">[Project Page]</a>
+                    <a href="papers/poster_2022_pd_breathing.pdf" target="_blank">[Poster]</a>
+                    <a href="bib/2022_NatureMed_PD_breathing.bib" target="_blank">[BibTeX]</a><br>
+                    <br>
+                    <!-- <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class='altmetric-embed' data-doi='10.1038/s41591-022-01932-x'></div><br> -->
+                    <!-- <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class='altmetric-embed' data-badge-type='medium-bar' data-altmetric-id='134832794'></div> -->
+                    <!-- <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-type="donut" data-altmetric-id="134832794"></div> -->
+                    <!-- <br>
+                    It has been selected to <em class="red"><b>Notable Advances 2022</b></em> by <b>Nature Medicine</b>, as <em class="red"><b>one of the top 10</b></em> critical developments that moved medicine forward in 2022. <br>
+                    <br> -->
+                    🏆 <a href="https://www.nature.com/articles/s41591-022-02146-x" target="_blank" rel="noopener noreferrer"><em class="red"><b>2022 Top Ten Notable Advances in Medicine</b></em></font></a> <a href="papers/Notable_Advances_2022.pdf" target="_blank">[Year In Review]</a><br>
+                    <br>
+                    <b>Covered by</b>: <a href="https://news.mit.edu/2022/artificial-intelligence-can-detect-parkinsons-from-breathing-patterns-0822" target="_blank">MIT News</a>,
+                    <a href="https://www.csail.mit.edu/news/artificial-intelligence-model-can-detect-parkinsons-breathing-patterns" target="_blank">MIT CSAIL News</a>,
+                    <a href="https://www.forbes.com/sites/jenniferhicks/2022/08/25/see-how-this-ai-analyzes-breathing-patterns-for-early-detection-of-parkinsons/?sh=7ad169971800" target="_blank">Forbes</a>,
+                    <a href="https://www.fiercebiotech.com/medtech/mit-researchers-track-parkinsons-patients-using-radar-they-sleep" target="_blank">Fierce Biotech</a>,
+                    <a href="https://www.urmc.rochester.edu/news/story/at-home-sensors-can-spot-parkinsons-disease" target="_blank">University of Rochester</a>,
+                    <a href="https://www.statnews.com/2022/08/22/parkinsons-disease-artificial-intelligence-breathing/" target="_blank">STAT News</a>, 
+                    <a href="https://newatlas.com/health-wellbeing/ai-parkinsons-disease-sleep-breathing-patterns-mit/" target="_blank">New Atlas</a>,
+                    <a href="https://www.bostonglobe.com/2022/08/25/business/mit-device-senses-breathing-patterns-spot-parkinsons-disease/" target="_blank">The Boston Globe</a>,
+                    <a href="https://developer.nvidia.com/blog/ai-remotely-detects-parkinsons-disease-during-sleep/?ncid=so-face-102294#cid=dev01_so-face_en-us" target="_blank">NVIDIA Technical Blog</a>,
+                    <a href="https://www.yahoo.com/now/bot-detects-parkinsons-listening-breathe-210028697.html" target="_blank">Yahoo</a>,
+                    <a href="https://www.fdanews.com/articles/209196-ai-device-detects-parkinsons-using-breathing-patterns?v=preview" target="_blank">FDA News</a>,
+                    <a href="https://www.wbur.org/radioboston/2022/08/25/mit-parkinsons-research" target="_blank">WBUR</a>,
+                    <a href="https://www.acsh.org/news/2022/09/10/parkinson%E2%80%99s-disease-gets-diagnostic-help-artificial-intelligence-16547" target="_blank">American Council on Science and Health</a>,
+                    <a href="https://www.nih.gov/news-events/nih-research-matters/night-breathing-patterns-identify-people-parkinson-s-disease" target="_blank">NIH News</a>,
+                    <a href="https://healthitanalytics.com/news/artificial-intelligence-model-detects-parkinsons-from-breathing-patterns" target="_blank">Health IT Analytics</a>,
+                    <a href="https://www.boston.com/news/health/2022/08/23/mit-ai-model-detect-parkinsons-disease-early-breathing-patterns/" target="_blank">Boston.com</a>,
+                    <a href="https://parkinsonsnewstoday.com/news/device-may-help-diagnose-parkinsons-from-breathing-patterns-parkinsons-diagnosis/" target="_blank">Parkinson's News Today</a>,
+                    <a href="https://www.washingtonpost.com/technology/2022/09/02/parkinsons-disease-ai-diagnosis/" target="_blank">The Washington Post</a>,
+                    <a href="https://www.futurity.org/sensor-parkinsons-sleep-2788842/?utm_source=rss&utm_medium=rss&utm_campaign=sensor-parkinsons-sleep-2788842" target="_blank">Futurity</a>,
+                    <a href="https://www.biospace.com/article/study-finding-and-tracking-parkinson-s-disease-with-artificial-intelligence/" target="_blank">BioSpace</a>,
+                    <a href="https://economictimes.indiatimes.com/magazines/panache/now-ai-can-detect-parkinsons-disease-while-you-are-sleeping/articleshow/93747223.cms" target="_blank">Times of India</a>,
+                    <a href="https://www.aerzteblatt.de/nachrichten/136862/Kuenstliche-Intelligenz-erkennt-Morbus-Parkinson-an-der-naechtlichen-Atmung?" target="_blank">aerzteblatt.de</a>,
+                    <a href="https://www.medscape.com/viewarticle/979684?src=" target="_blank">MedSpace</a>,
+                    <a href="https://www.azorobotics.com/News.aspx?newsID=13174" target="_blank">AzoRobotics</a>,
+                    <a href="https://healthcare-in-europe.com/en/news/ai-detect-parkinsons-breathing.html" target="_blank">healthcare-in-europe</a>,
+                    <a href="https://www.thedailybeast.com/this-ai-bot-detects-parkinsons-disease-by-listening-to-you-breathe-during-your-sleep" target="_blank">The Daily Beast</a>,
+                    <a href="https://indianexpress.com/article/technology/science/mit-research-artificial-intelligence-detect-parkinsons-disease-8132802/" target="_blank">Indian Express</a>,
+                    and more media outlets can be found at <a href="https://nature.altmetric.com/details/134832794/news" target="_blank">here</a>.
+                    
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2022_tokencut_video.gif">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>TokenCut: Segmenting Objects in Images and Videos with Self-supervised Transformer and Normalized Cut</b><br>
+                    <a href="https://yangtaowang95.github.io/" target="_blank" class="dark">Yangtao Wang</a>, 
+                    <a href="https://xishen0220.github.io/" target="_blank" class="dark">Xi Shen</a>, <b>Yuan Yuan</b>, Yuming Du,
+                    <a href="https://scholar.google.com/citations?user=ym_t6QYAAAAJ&hl=zh-CN" class="dark">Maomao Li</a>,
+                    <a href="http://hushell.github.io/" target="_blank" class="dark">Xu Hu</a>, 
+                    <a href="http://crowley-coutaz.fr/jlc/jlc.html" target="_blank" class="dark">James Crowley</a>, 
+                    <a href="https://research.vaufreydaz.org/" target="_blank" class="dark">Dominique Vaufreydaz</a><br>
+                    <i>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>), 2023</i><br>
+                    <a href="https://www.m-psi.fr/Papers/TokenCut2022/" target="_blank">[Project Page]</a>
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10224285" target="_blank">[PDF]</a>
+                    <a href="https://arxiv.org/pdf/2209.00383.pdf" target="_blank">[Arxiv]</a>
+                    <a href="bib/2023_tpami_tokencut_video.bib" target="_blank">[BibTeX]</a>
+                    <a href="https://github.com/YangtaoWANG95/TokenCut_video" target="_blank" class="next-element-vertical-align-text-top">[Code]</a>
+                    <a class="github-button" href="https://github.com/YangtaoWANG95/TokenCut_video" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> <br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2022_rcl.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Addressing Feature Suppression in Unsupervised Visual Representations</b><br>
+                    <a href="http://www.tianhongli.me/" target="_blank" class="dark">Tianhong Li*</a>, <a href="http://lijiefan.me/" target="_blank" class="dark">Lijie Fan*</a>, <b>Yuan Yuan</b>, <a href="http://people.csail.mit.edu/hehaodele/" target="_blank" class="dark">Hao He</a>, <a href="https://people.csail.mit.edu/yonglong/" target="_blank" class="dark">Yonglong Tian</a>, <a href="https://www.rogerioferis.org/" target="_blank" class="dark">Rogerio Feris</a>, <a href="https://people.csail.mit.edu/indyk/" target="_blank" class="dark">Piotr Indyk</a> and <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a><br>
+                    <i>Winter Conference on Applications of Computer Vision (<b>WACV</b>), 2023</i><br>
+                    <a href="https://openaccess.thecvf.com/content/WACV2023/papers/Li_Addressing_Feature_Suppression_in_Unsupervised_Visual_Representations_WACV_2023_paper.pdf" target="_blank">[PDF]</a>
+                    <a href="https://www.youtube.com/watch?v=wbtAOIS16LY" target="_blank">[Talk (by Dina)]</a>
+                    <a href="bib/2023_wacv_feature_suppression.bib" target="_blank">[BibTeX]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2022_tokencut.gif">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Self-Supervised Transformers for Unsupervised Object Discovery using Normalized Cut</b><br>
+                    <a href="https://yangtaowang95.github.io/" target="_blank" class="dark">Yangtao Wang</a>, <a href="https://xishen0220.github.io/" target="_blank" class="dark">Xi Shen</a>, <a href="http://hushell.github.io/" target="_blank" class="dark">Xu Hu</a>, <b>Yuan Yuan</b>, <a href="http://crowley-coutaz.fr/jlc/jlc.html" target="_blank" class="dark">James Crowley</a>, <a href="https://research.vaufreydaz.org/" target="_blank" class="dark">Dominique Vaufreydaz</a><br>
+                    <i>Computer Vision and Pattern Recognition (<b>CVPR</b>), 2022</i><br>
+                    <a href="https://www.m-psi.fr/Papers/TokenCut2022/" target="_blank">[Project Page]</a>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_Self-Supervised_Transformers_for_Unsupervised_Object_Discovery_Using_Normalized_Cut_CVPR_2022_paper.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2022_cvpr_tokencut.bib" target="_blank">[BibTeX]</a>
+                    <a href="https://github.com/YangtaoWANG95/TokenCut" target="_blank">[Code (GitHub)]</a>
+                    <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/wangyan/tokencut" target="_blank">[Code (GitLab)]</a>
+                    <a href='https://colab.research.google.com/github/YangtaoWANG95/TokenCut/blob/master/inference_demo.ipynb' class="vertical-align-text"><img alt="Queries" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
+                    <a href='https://huggingface.co/spaces/akhaliq/TokenCut' class="vertical-align-text next-element-vertical-align-middle"><img alt="Queries" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue"></a>
+                    <a class="github-button" href="https://github.com/YangtaoWANG95/TokenCut" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>   
+                  </p>
+                </div>
+              </div>
+            </article>
+		  
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2022_Target_SupCon.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Targeted Supervised Contrastive Learning for Long-Tailed Recognition</b><br>
+                    <a href="http://www.tianhongli.me/" target="_blank" class="dark">Tianhong Li*</a>, <a href="https://scholar.google.com/citations?user=UlaXT00AAAAJ&hl=en" target="_blank" class="dark">Peng Cao*</a>, <b>Yuan Yuan</b>, <a href="http://lijiefan.me/" target="_blank" class="dark">Lijie Fan</a>, <a href="https://www.mit.edu/~yuzhe/" target="_blank" class="dark">Yuzhe Yang</a>, <a href="https://www.rogerioferis.org/" target="_blank" class="dark">Rogerio Feris</a>, 
+                    <a href="https://people.csail.mit.edu/indyk/" target="_blank" class="dark">Piotr Indyk</a> and 
+                    <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a><br>
+                    <i>Computer Vision and Pattern Recognition (<b>CVPR</b>), 2022</i><br>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Targeted_Supervised_Contrastive_Learning_for_Long-Tailed_Recognition_CVPR_2022_paper.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2022_cvpr_tsc.bib" target="_blank">[BibTeX]</a>
+                    <a href="https://github.com/LTH14/targeted-supcon" target="_blank" class="next-element-vertical-align-text-top">[Code]</a>
+                    <a class="github-button" href="https://github.com/LTH14/targeted-supcon" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2022_wacv_rfrcl.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Unsupervised Learning for Human Sensing Using Radio Signals</b><br>
+                    <a href="http://www.tianhongli.me/" target="_blank" class="dark">Tianhong Li*</a>, <a href="http://lijiefan.me/" target="_blank" class="dark">Lijie Fan*</a>, <b>Yuan Yuan*</b> and <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a><br>
+                    (* indicates equal contribution)<br>
+                    <i>Winter Conference on Applications of Computer Vision (<b>WACV</b>), 2022</i><br>
+                    <a href="https://openaccess.thecvf.com/content/WACV2022/papers/Li_Unsupervised_Learning_for_Human_Sensing_Using_Radio_Signals_WACV_2022_paper.pdf" target="_blank">[PDF]</a>
+                    <a href="papers/poster_2022_wacv_RF_Unsup.pdf" target="_blank">[Poster]</a>
+                    <a href="bib/2022_wacv_RF_Unsup.bib" target="_blank">[BibTeX]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+            
+            
+            
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2020_neurips_rank_1_lattice.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Subgroup-based Rank-1 Lattice Quasi-Monte Carlo</b><br>
+                    <a href="https://yueminglyu.github.io/" target="_blank" class="dark">Yueming Lyu</a>, <b>Yuan Yuan</b> and Ivor W. Tsang<br>
+                    <i>Thirty-fourth Conference on Neural Information Processing Systems (<b>NeurIPS</b>), 2020</i><br>
+                    <a href="https://proceedings.neurips.cc/paper/2020/file/456048afb7253926e1fbb7486e699180-Paper.pdf" target="_blank">[Paper]</a>
+                    <a href="https://proceedings.neurips.cc/paper/2020/file/456048afb7253926e1fbb7486e699180-Supplemental.zip" target="_blank">[Supplemental]</a>
+                    <a href="https://arxiv.org/pdf/2011.06446.pdf" target="_blank">[arXiv]</a>
+                    <a href="papers/poster_2020_neurips_Lattice.pdf" target="_blank">[Poster]</a>
+                    <a href="bib/2020_neurips_subgroup.bib" target="_blank">[BibTeX]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2020_eccv_rf_diary.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>In-home Daily-Life Captioning Using Radio Signals</b><br>
+                    <a href="http://lijiefan.me/" target="_blank" class="dark">Lijie Fan*</a>, <a href="http://www.tianhongli.me/" target="_blank" class="dark">Tianhong Li*</a>, <b>Yuan Yuan</b> and <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a><br>
+                    <i>European Conference on Computer Vision (<b>ECCV</b>), 2020</i><br>
+                    <a href="http://rf-diary.csail.mit.edu/" target="_blank">[Project Page]</a>
+                    <a href="http://rf-diary.csail.mit.edu/papers/rfdiary_eccv.pdf" target="_blank">[PDF]</a>
+                    <a href="https://arxiv.org/abs/2008.10966" target="_blank">[arXiv]</a>
+                    <a href="http://rf-diary.csail.mit.edu/slides/longtalk.pdf" target="_blank">[Slides]</a>
+                    <a href="https://www.youtube.com/watch?v=j528nQs4_a8&feature=youtu.be" target="_blank">[MIT CSAIL Video]</a>
+                    <a href="https://www.youtube.com/watch?v=LA-JW4_ovAQ&feature=youtu.be" target="_blank">[Video]</a>
+                    <a href="https://www.youtube.com/watch?v=S2Y-zPJnl9U&feature=youtu.be" target="_blank">[Talk]</a>
+                    <a href="bib/2020_eccv_rf_diary.bib" target="_blank">[BibTeX]</a><br>
+                    Covered by: <a href="https://www.csail.mit.edu/news/device-nursing-homes-can-monitor-residents-activities-permission-and-without-video" target="_blank">MIT CSAIL News</a>,
+                    <a href="http://mms.tveyes.com/MediaCenterPlayer.aspx?u=aHR0cDovL21lZGlhY2VudGVyLnR2ZXllcy5jb20vZG93bmxvYWRnYXRld2F5LmFzcHg/VXNlcklEPTMwMzQ3OCZNRElEPTEzNzExMTM5Jk1EU2VlZD0yNTU0JlR5cGU9TWVkaWE%3D" target="blank">BBC</a>,
+                    <a href="https://techcrunch.com/2020/08/24/mit-wireless-system-can-monitor-what-care-facility-residents-are-doing-while-preserving-privacy/" target="_blank">TechCrunch</a>,
+                    <a href="https://www.engadget.com/mit-wireless-signals-monitoring-machine-learning-rf-diary-040049578.html" target="_blank">Engadget</a>,
+                    <a href="https://venturebeat.com/2020/08/24/mit-csails-rf-diary-monitors-people-through-walls-and-in-total-darkness/" target="_blank">VentureBeat</a>,
+                    <a href="https://www.dailymail.co.uk/sciencetech/article-8665391/AI-device-nursing-homes-monitor-elderly-residents-using-radio-waves.html" target="_blank">Daily Mail</a>,
+                    <a href="https://hothardware.com/news/mit-project-can-track-people-through-walls-and-darkness" target="_blank">Hot Hardware</a>,
+                    <a href="https://www.xataka.com/otros-dispositivos/poder-vigilar-comprometer-privacidad-idea-monitorizacion-video-estos-investigadores-mit" target="_blank">Xataka (Mexico)</a><br>
+                    <em class="red"><b>Oral Presentation (2%)</b></em><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2020_cvpr_rf_reid.png">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Learning Longterm Representations for Person Re-Identification Using Radio Signals</b><br>
+                    <a href="http://lijiefan.me/" target="_blank" class="dark">Lijie Fan*</a>, <a href="http://www.tianhongli.me/" target="_blank" class="dark">Tianhong Li*</a>, <a href="https://rongyaofang.github.io/" target="_blank" class="dark">Rongyao Fang*</a>, <a href="https://www.linkedin.com/in/rumen-hristov-38918817/" target="_blank" class="dark">Rumen Hristov</a>, 
+                    <b>Yuan Yuan</b> and <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a><br>
+                    <i>Computer Vision and Pattern Recognition (<b>CVPR</b>), 2020</i><br>
+                    <a href="http://rf-reid.csail.mit.edu/" target="_blank">[Project Page]</a>
+                    <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Fan_Learning_Longterm_Representations_for_Person_Re-Identification_Using_Radio_Signals_CVPR_2020_paper.pdf" target="_blank">[PDF]</a>
+                    <a href="https://arxiv.org/abs/2004.01091" target="_blank">[arXiv]</a>
+                    <a href="https://www.youtube.com/watch?v=oYv30obQ8P4&feature=youtu.be" target="_blank">[Video]</a>
+                    <a href="bib/2020_cvpr_rf_reid.bib" target="_blank">[BibTeX]</a><br>
+                    Covered by: <a href="https://www.csail.mit.edu/news/home-health-device-uses-wireless-signals-identify-person-its-seen" target="_blank">MIT CSAIL News</a>,
+                    <a href="https://techcrunch.com/2020/06/16/mits-new-way-to-remotely-monitor-vital-signs-over-time-could-help-with-early-covid-19-detection-in-care-homes/" target="_blank">TechCrunch</a>,
+                    <a href="https://www.yahoo.com/lifestyle/mits-way-remotely-monitor-vital-132517815.html" target="_blank">Yahoo News</a>,
+                    <a href="https://www.healthcareitnews.com/news/mit-csail-machine-learning-tool-could-help-nursing-homes-predict-covid-19" target="_blank">Healthcare IT News</a>,
+                    <a href="https://www.mddionline.com/artificial-intelligence/can-radio-frequency-signals-provide-covid-19-surveillance-group-homes" target="_blank">Medical Device and Diagnostic Industry</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2019_iclr_maan.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Marginalized Average Attentional Network For Weakly-Supervised Learning</b><br>
+                    <b>Yuan Yuan</b>, <a href="https://yueminglyu.github.io/" target="_blank" class="dark">Yueming Lyu</a>, <a href="https://xishen0220.github.io/" target="_blank" class="dark">Xi Shen</a>, Ivor W. Tsang and Dit-Yan Yeung<br>
+                    <i>International Conference on Learning Representations (<b>ICLR</b>), 2019</i><br>
+                    <a href="https://arxiv.org/pdf/1905.08586.pdf" target="_blank">[PDF]</a>
+                    <a href="https://github.com/yyuanad/MAAN" target="_blank">[Code]</a>
+                    <a href="bib/2019_iclr_maan.bib" target="_blank" class="next-element-vertical-align-text-top">[BibTeX]</a>
+                    <a class="github-button" href="https://github.com/yyuanad/MAAN" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2019_jmlr_yueming.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Efficient Batch Black-box Optimization with Deterministic Regret Bounds</b><br>
+                    <a href="https://yueminglyu.github.io/" target="_blank" class="dark">Yueming Lyu</a>, <b>Yuan Yuan</b> and Ivor W. Tsang<br>
+                    <i> Under Review (<b>JMLR</b>), 2019</i><br>
+                    <a href="https://arxiv.org/pdf/1905.10041.pdf" target="_blank">[arXiv]</a>
+                    <a href="bib/2019_jrml_submit.bib" target="_blank">[BibTeX]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2017_iccv_TD_GraphLSTM.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Temporal Dynamic Graph LSTM for Action-driven Video Object Detection</b><br>
+                    <b>Yuan Yuan</b>, Xiaodan Liang, Xiaolong Wang, Dit-Yan Yeung and Abhinav Gupta<br>
+                    <i>International Conference on Computer Vision (<b>ICCV</b>), 2017</i><br>
+                    <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Yuan_Temporal_Dynamic_Graph_ICCV_2017_paper.pdf" target="_blank">[PDF]</a>
+                    <a href="https://github.com/xiaolonw/CharadesDet" target="_blank">[Dataset]</a>
+                    <a href="bib/2017_iccv_TD_GraphLSTM.bib" target="_blank">[BibTeX]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2016_tcsvt_amin.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Adaptive Block Coding Order for Intra Prediction in HEVC</b><br>
+                    Amin Zheng, <b>Yuan Yuan</b>, Jiantao Zhou, Yuanfang Guo, Haitao Yang and Oscar C. Au<br>
+                    <i>IEEE Transaction on Circuits and Systems for Video Technology, vol.26, no.11, pp.2152-2158, Nov. (<b>TCSVT</b>), 2016</i><br>
+                    <a href="papers/paper_2016_TCSVT_amin.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2016_TCSVT_amin.bib" target="_blank">[BibTeX]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icassp_yuan.jpeg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Image Compression Via Dense Descriptors Assisted Synthesis</b><br>
+                    <b>Yuan Yuan</b>, Amin Zheng, Haitao Yang and Oscar C. Au<br>
+                    <i>International Conference on Acoustics, Speech and Signal Processing (<b>ICASSP</b>), 2015</i><br>
+                    <a href="papers/paper_2015_icassp_yuan.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2015_icassp_yuan.bib" target="_blank">[BibTeX]</a><br>
+                    <em class="red"><b>Oral Presentation</b></em><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icip_amin_mvf.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Motion Vector Fields Based Video Coding</b><br>
+                    Amin Zheng, <b>Yuan Yuan</b>, Hong Zhang, Haitao Yang, Pengfei Wan and Oscar C. Au<br>
+                    <i>International Conference on Image Processing (<b>ICIP</b>), 2015</i><br>
+                    <a href="papers/paper_2015_icip_amin_mvf.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2015_icip_amin_mvf.bib" target="_blank">[BibTeX]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icip_amin_of.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Motion Estimation Via Hierarchical Block Matching and Graph Cut</b><br>
+                    Amin Zheng, <b>Yuan Yuan</b>, Sunil Prasad Jaiswal and Oscar C. Au<br>
+                    <i>International Conference on Image Processing (<b>ICIP</b>), 2015</i><br>
+                    <a href="papers/paper_2015_icip_amin_of.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2015_icip_amin_of.bib" target="_blank">[BibTeX]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2015_icip_yonggen.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Image Colorization Via Color Propagation and Rank Minimization</b><br>
+                    Yonggen Ling, Oscar C. Au, Jiahao Pang, Jin Zeng, <b>Yuan Yuan</b> and Amin Zheng<br>
+                    <i>International Conference on Image Processing (<b>ICIP</b>), 2015</i><br>
+                    <a href="papers/paper_2015_icip_yonggen_colorization.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2015_icip_yonggen_colorization.bib" target="_blank">[BibTeX]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2014_icassp_yuan.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Image Compression Via Sparse Reconstruction</b><br>
+                    <b>Yuan Yuan</b>, Oscar C. Au, Amin Zheng and Haitao Yang<br>
+                    <i>International Conference on Acoustics, Speech and Signal Processing (<b>ICASSP</b>), 2014</i><br>
+                    <a href="papers/paper_2014_icassp_yuan.pdf" target="_blank">[PDF]</a>
+                    <a href="papers/poster_2014_icassp_yuan.pdf" target="_blank">[Poster]</a>
+                    <a href="bib/2014_icassp_yuan.bib" target="_blank">[BibTeX]</a><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="columns">
+              <div class="column is-3">
+                <figure class="image">
+                  <img src="images/publications/2014_icip_haiyan.jpg">
+                </figure>
+              </div>
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Natural Image Matting via Adaptive Local and Nonlocal Sample Clustering</b><br>
+                    Haiyan Yang, Oscar C. Au, <b>Yuan Yuan</b> and Wenxiu Sun<br>
+                    <i>International Conference on Image Processing (<b>ICIP</b>), 2014</i><br>
+                    <a href="papers/paper_2014_icip_haiyan_matting.pdf" target="_blank">[PDF]</a>
+                    <a href="bib/2014_icip_haiyan_matting.bib" target="_blank">[BibTeX]</a><br>
+                    <em class="red"><b>Top 10% Paper Award</b></em><br>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+            <h3 >
+              Posters & Technical Reports
+            </h3>
+            <article class="columns">
+              <div class="column">
+                <div class="content">
+                  <p>
+                    <b>Radiofrequency-based Wireless and Contactless Sensors for Detection of Seizures and Risk Factors of SUDEP</b><br>
+                    <a href="https://www.doximity.com/cv/hnicolaslemus" target="_blank" class="dark">Hernan Nicolas Lemus</a>, <a href="http://people.csail.mit.edu/hehaodele/" target="_blank" class="dark">Hao He</a>, <b>Yuan Yuan</b>, <a href="https://physiciandirectory.brighamandwomens.org/details/15153/steven-tobochnik-neurology-boston" target="_blank" class="dark">Steven Tobochnik</a>, <a href="https://www.linkedin.com/in/emilylapinskas/" target="_blank" class="dark">Emily Lapinskas</a>, <a href="https://people.csail.mit.edu/dina/" target="_blank" class="dark">Dina Katabi</a> and <a href="https://physiciandirectory.brighamandwomens.org/details/1610/jong-lee-neurology-boston" target="_blank" class="dark">Jong Woo Lee</a><br>
+                    <i>American Epilepsy Society (AES) Annual Meeting, Nashville, USA, 2022</i><br>
+                    <a href="papers/poster_2022_seizure.pdf" target="_blank">[Poster]</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+
+
+            <h3 >
+              Patents and Patent Applications
+            </h3>
+<!--             <ul>
+              <li><a href="https://patents.google.com/patent/CN113160854A/en?oq=CN113160854" target="_blank">Voice interaction system, related method, device and equipment</a>, <a href="https://patentimages.storage.googleapis.com/a4/5a/80/eedd7ce7d28416/CN113160854A.pdf" target="_blank">CN113160854</a>.</li>
+              <li><a href="https://patents.google.com/patent/CN112825248A/en?oq=CN112825248" target="_blank">Voice processing method, model training method, interface display method and equipment</a>, <a href="https://patentimages.storage.googleapis.com/a5/6f/ac/6cf253d225b6c8/CN112825248A.pdf" target="_blank">CN112825248</a>.</li>
+              <li><a href="https://patents.google.com/patent/CN110096938A/en?oq=CN110096938" target="_blank">Method and device for processing action behaviors in video</a>, <a href="https://patentimages.storage.googleapis.com/03/82/3a/874a0e4d7dd60d/CN110096938A.pdf" target="_blank">CN110096938</a>.</li>
+              <li><a href="https://patents.google.com/patent/JP6389264B2/en" target="_blank">Encoding and decoding methods and apparatuses</a>, <a href="https://patentimages.storage.googleapis.com/62/a3/61/0d95dc00cc3003/JP6389264B2.pdf" target="_blank">JP6389264</a>, granted Sep. 2018; <a href="https://patentimages.storage.googleapis.com/48/b8/db/9c9af2352843be/CN104853196B.pdf" target="_blank">CN104853196</a>, granted Oct. 2018; <a href="https://patentimages.storage.googleapis.com/0f/12/3d/4bade0b838d237/KR101960825B1.pdf" target="_blank">KR101960825</a>, granted Mar. 2019;
+  <a href="https://patentimages.storage.googleapis.com/21/16/95/6271e1f6b8a679/WO2015124058A1.pdf" target="_blank">WO2015124058</a>, Aug. 2015; <a href="https://patentimages.storage.googleapis.com/f3/54/63/bbc84aebe4e87b/EP3094091A1.pdf" target="_blank">EP3094091A1</a>, Nov. 2016; <a href="https://patentimages.storage.googleapis.com/7b/d4/47/7c2901d8f38217/US20160373767A1.pdf" target="_blank">US20160373767</a>, Dec. 2016.</li>
+            </ul> -->
+            <ul>
+              <!-- <li><b>Voice interaction system, related method, device and equipment</b> <a href="https://patents.google.com/patent/CN113160854A/en?oq=CN113160854" target="_blank">[Google Patent Page]</a></li>
+              <a href="https://patentimages.storage.googleapis.com/a4/5a/80/eedd7ce7d28416/CN113160854A.pdf" target="_blank">CN113160854</a>, Jan. 2020. -->
+
+              <li><a href="https://patentimages.storage.googleapis.com/a4/5a/80/eedd7ce7d28416/CN113160854A.pdf" target="_blank" style="color:black;"><b>Voice interaction system, related method, device and equipment</b></a></li>
+              <b>Yuan Yuan</b>, Yuxiang Hu, Feijun Jiang.<br>
+              <b>Chinese Patent</b> <a href="https://patents.google.com/patent/CN113160854A/en?oq=CN113160854" target="_blank">CN113160854</a> | 202010085433.7 | priority date: Jan 22, 2020 <br><br>
+              
+              <!-- <li><b>Voice processing method, model training method, interface display method and equipment</b> <a href="https://patents.google.com/patent/CN112825248A/en?oq=CN112825248" target="_blank">[Google Patent Page]</a></li>
+              <a href="https://patentimages.storage.googleapis.com/a5/6f/ac/6cf253d225b6c8/CN112825248A.pdf" target="_blank">CN112825248</a>, Nov. 2019. -->
+
+              <li><a href="https://patentimages.storage.googleapis.com/a5/6f/ac/6cf253d225b6c8/CN112825248A.pdf" target="_blank" style="color:black;"><b>Voice processing method, model training method, interface display method and equipment</b></a></li>
+              <b>Yuan Yuan</b>, Yuxiang Hu, Feijun Jiang.<br>
+              <b>Chinese Patent</b> <a href="https://patents.google.com/patent/CN112825248A/en?oq=CN112825248" target="_blank">CN112825248</a> | 201911134195.8 | priority date: Nov 19, 2019 <br><br>
+
+              <!-- <li><b>Method and device for processing action behaviors in video</b> <a href="https://patents.google.com/patent/CN110096938A/en?oq=CN110096938" target="_blank">[Google Patent Page]</a></li>
+              <a href="https://patentimages.storage.googleapis.com/03/82/3a/874a0e4d7dd60d/CN110096938A.pdf" target="_blank">CN110096938</a>, Jan. 2018. -->
+
+              <li><a href="https://patentimages.storage.googleapis.com/03/82/3a/874a0e4d7dd60d/CN110096938A.pdf" target="_blank" style="color:black;"><b>Method and device for processing action behaviors in video</b></a></li>
+              <b>Yuan Yuan</b>, Lin Ma, Zequn Jie, Wei Liu.<br>
+              <b>Chinese Patent</b> <a href="https://patents.google.com/patent/CN110096938A/en?oq=CN110096938" target="_blank">CN110096938</a> | 201810098321.8 | priority date: Jan 31, 2018 <br><br>
+              
+              <!-- <li><b>Encoding and decoding methods and apparatuses</b> <a href="https://patents.google.com/patent/US20160373767A1/en" target="_blank">[Google Patent Page]</a></li>
+              <a href="https://patentimages.storage.googleapis.com/0f/12/3d/4bade0b838d237/KR101960825B1.pdf" target="_blank">KR101960825</a>, granted Mar. 2019;
+              <a href="https://patentimages.storage.googleapis.com/48/b8/db/9c9af2352843be/CN104853196B.pdf" target="_blank">CN104853196</a>, granted Oct. 2018; 
+              <a href="https://patentimages.storage.googleapis.com/62/a3/61/0d95dc00cc3003/JP6389264B2.pdf" target="_blank">JP6389264</a>, granted Sep. 2018; 
+              <a href="https://patentimages.storage.googleapis.com/7b/d4/47/7c2901d8f38217/US20160373767A1.pdf" target="_blank">US20160373767</a>, Dec. 2016;
+              <a href="https://patentimages.storage.googleapis.com/f3/54/63/bbc84aebe4e87b/EP3094091A1.pdf" target="_blank">EP3094091A1</a>, Nov. 2016; 
+              <a href="https://patentimages.storage.googleapis.com/21/16/95/6271e1f6b8a679/WO2015124058A1.pdf" target="_blank">WO2015124058</a>, Aug. 2015. --> 
+
+              <li><a href="https://patents.google.com/patent/CN104853196B/en" target="_blank" style="color:black;"><b>Encoding and decoding methods and apparatuses</b></a></li>
+              Haitao Yang, Amin Zheng, <b>Yuan Yuan</b>, Oscar Au. <br>
+              <b>Chinese Patent</b> <a href="https://patents.google.com/patent/CN104853196B/en" target="_blank">CN104853196</a> | 201410054130.3 | priority date: Feb 18, 2014 | publication date: Oct 19, 2018. <br>
+              <b>Korean Patent</b> <a href="https://patents.google.com/patent/KR101960825B1/en" target="_blank">KR101960825</a> | 
+              KR1020167023765 | priority date: Feb 02, 2015 | publication date: Mar 21, 2019. <br>  
+              <b>Japanese Patent</b> <a href="https://patents.google.com/patent/JP6389264B2/en" target="_blank">JP6389264</a> | 2016-552562 | priority date: Feb 02, 2015｜publication date: Sep 12, 2018. <br>
+              <b>European Patent</b> <a href="https://patents.google.com/patent/EP3094091A4/en" target="_blank">EP3094091A4</a> | EP15752321.8 | priority date: Feb 02, 2015 <br>
+              <b>WIPO (PCT)</b> <a href="https://patents.google.com/patent/WO2015124058A1/en" target="_blank">WO2015124058</a> | PCT/CN2015/072089 | priority date: Feb 02, 2015 <br>
+              <b>US Patent</b> <a href="https://patents.google.com/patent/US20160373767A1/en" target="_blank">US20160373767</a> | US15/240,436 | priority date: Feb 02, 2015 <br><br>
+            </ul>
+            
+
+            <h3 id="press">
+              Press Coverage
+            </h3>
+            <ul>
+              <li><b><a href="https://www.nature.com/articles/s41591-022-01932-x" target="_blank" class="dark">AI-based Biomarker for Parkinson's Disease using Nocturnal Breathing</a></b> was covered by: <a href="https://news.mit.edu/2022/artificial-intelligence-can-detect-parkinsons-from-breathing-patterns-0822" target="_blank">MIT News</a>,
+                    <a href="https://www.csail.mit.edu/news/artificial-intelligence-model-can-detect-parkinsons-breathing-patterns" target="_blank">MIT CSAIL News</a>,
+                    <a href="https://www.forbes.com/sites/jenniferhicks/2022/08/25/see-how-this-ai-analyzes-breathing-patterns-for-early-detection-of-parkinsons/?sh=7ad169971800" target="_blank">Forbes</a>,
+                    <a href="https://www.fiercebiotech.com/medtech/mit-researchers-track-parkinsons-patients-using-radar-they-sleep" target="_blank">Fierce Biotech</a>,
+                    <a href="https://www.urmc.rochester.edu/news/story/at-home-sensors-can-spot-parkinsons-disease" target="_blank">University of Rochester</a>,
+                    <a href="https://www.statnews.com/2022/08/22/parkinsons-disease-artificial-intelligence-breathing/" target="_blank">STAT News</a>, 
+                    <a href="https://newatlas.com/health-wellbeing/ai-parkinsons-disease-sleep-breathing-patterns-mit/" target="_blank">New Atlas</a>,
+                    <a href="https://www.bostonglobe.com/2022/08/25/business/mit-device-senses-breathing-patterns-spot-parkinsons-disease/" target="_blank">The Boston Globe</a>,
+                    <a href="https://developer.nvidia.com/blog/ai-remotely-detects-parkinsons-disease-during-sleep/?ncid=so-face-102294#cid=dev01_so-face_en-us" target="_blank">NVIDIA Technical Blog</a>,
+                    <a href="https://www.yahoo.com/now/bot-detects-parkinsons-listening-breathe-210028697.html" target="_blank">Yahoo</a>,
+                    <a href="https://www.fdanews.com/articles/209196-ai-device-detects-parkinsons-using-breathing-patterns?v=preview" target="_blank">FDA News</a>,
+                    <a href="https://www.wbur.org/radioboston/2022/08/25/mit-parkinsons-research" target="_blank">WBUR</a>,
+                    <a href="https://www.acsh.org/news/2022/09/10/parkinson%E2%80%99s-disease-gets-diagnostic-help-artificial-intelligence-16547" target="_blank">American Council on Science and Health</a>,
+                    <a href="https://www.nih.gov/news-events/nih-research-matters/night-breathing-patterns-identify-people-parkinson-s-disease" target="_blank">NIH News</a>,
+                    <a href="https://healthitanalytics.com/news/artificial-intelligence-model-detects-parkinsons-from-breathing-patterns" target="_blank">Health IT Analytics</a>,
+                    <a href="https://www.boston.com/news/health/2022/08/23/mit-ai-model-detect-parkinsons-disease-early-breathing-patterns/" target="_blank">Boston.com</a>,
+                    <a href="https://parkinsonsnewstoday.com/news/device-may-help-diagnose-parkinsons-from-breathing-patterns-parkinsons-diagnosis/" target="_blank">Parkinson's News Today</a>,
+                    <a href="https://www.washingtonpost.com/technology/2022/09/02/parkinsons-disease-ai-diagnosis/" target="_blank">The Washington Post</a>,
+                    <a href="https://www.futurity.org/sensor-parkinsons-sleep-2788842/?utm_source=rss&utm_medium=rss&utm_campaign=sensor-parkinsons-sleep-2788842" target="_blank">Futurity</a>,
+                    <a href="https://www.biospace.com/article/study-finding-and-tracking-parkinson-s-disease-with-artificial-intelligence/" target="_blank">BioSpace</a>,
+                    <a href="https://economictimes.indiatimes.com/magazines/panache/now-ai-can-detect-parkinsons-disease-while-you-are-sleeping/articleshow/93747223.cms" target="_blank">Times of India</a>,
+                    <a href="https://www.aerzteblatt.de/nachrichten/136862/Kuenstliche-Intelligenz-erkennt-Morbus-Parkinson-an-der-naechtlichen-Atmung?" target="_blank">aerzteblatt.de</a>,
+                    <a href="https://www.medscape.com/viewarticle/979684?src=" target="_blank">MedSpace</a>,
+                    <a href="https://www.azorobotics.com/News.aspx?newsID=13174" target="_blank">AzoRobotics</a>,
+                    <a href="https://healthcare-in-europe.com/en/news/ai-detect-parkinsons-breathing.html" target="_blank">healthcare-in-europe</a>,
+                    <a href="https://www.thedailybeast.com/this-ai-bot-detects-parkinsons-disease-by-listening-to-you-breathe-during-your-sleep" target="_blank">The Daily Beast</a>,
+                    <a href="https://indianexpress.com/article/technology/science/mit-research-artificial-intelligence-detect-parkinsons-disease-8132802/" target="_blank">Indian Express</a>,
+                    and <a href="https://nature.altmetric.com/details/134832794/news" target="_blank">and other media outlets</a>.</li>
+              <li><b><a href="http://rf-diary.csail.mit.edu/" target="_blank" class="dark">In-Home Daily-Life Captioning Using Radio Signals</a></b> was covered by: <a href="https://www.csail.mit.edu/news/device-nursing-homes-can-monitor-residents-activities-permission-and-without-video" target="_blank">MIT CSAIL News</a>,
+                    <a href="http://mms.tveyes.com/MediaCenterPlayer.aspx?u=aHR0cDovL21lZGlhY2VudGVyLnR2ZXllcy5jb20vZG93bmxvYWRnYXRld2F5LmFzcHg/VXNlcklEPTMwMzQ3OCZNRElEPTEzNzExMTM5Jk1EU2VlZD0yNTU0JlR5cGU9TWVkaWE%3D" target="blank">BBC</a>,
+                    <a href="https://techcrunch.com/2020/08/24/mit-wireless-system-can-monitor-what-care-facility-residents-are-doing-while-preserving-privacy/" target="_blank">TechCrunch</a>,
+                    <a href="https://www.engadget.com/mit-wireless-signals-monitoring-machine-learning-rf-diary-040049578.html" target="_blank">Engadget</a>,
+                    <a href="https://venturebeat.com/2020/08/24/mit-csails-rf-diary-monitors-people-through-walls-and-in-total-darkness/" target="_blank">VentureBeat</a>,
+                    <a href="https://www.dailymail.co.uk/sciencetech/article-8665391/AI-device-nursing-homes-monitor-elderly-residents-using-radio-waves.html" target="_blank">Daily Mail</a>,
+                    <a href="https://hothardware.com/news/mit-project-can-track-people-through-walls-and-darkness" target="_blank">Hot Hardware</a>,
+                    <a href="https://www.xataka.com/otros-dispositivos/poder-vigilar-comprometer-privacidad-idea-monitorizacion-video-estos-investigadores-mit" target="_blank">Xataka (Mexico)</a>, and other media outlets.<br></li>
+              <li><b><a href="http://rf-reid.csail.mit.edu/" target="_blank" class="dark">Learning Longterm Representations for Person Re-Identification Using Radio Signals</a></b> was covered by: <a href="https://www.csail.mit.edu/news/home-health-device-uses-wireless-signals-identify-person-its-seen" target="_blank">MIT CSAIL News</a>,
+                    <a href="https://techcrunch.com/2020/06/16/mits-new-way-to-remotely-monitor-vital-signs-over-time-could-help-with-early-covid-19-detection-in-care-homes/" target="_blank">TechCrunch</a>,
+                    <a href="https://www.yahoo.com/lifestyle/mits-way-remotely-monitor-vital-132517815.html" target="_blank">Yahoo News</a>,
+                    <a href="https://www.healthcareitnews.com/news/mit-csail-machine-learning-tool-could-help-nursing-homes-predict-covid-19" target="_blank">Healthcare IT News</a>,
+                    <a href="https://www.mddionline.com/artificial-intelligence/can-radio-frequency-signals-provide-covid-19-surveillance-group-homes" target="_blank">Medical Device and Diagnostic Industry</a>, and other media outlets.</li>
+            </ul>
+
+
+
+            <h3 id="teaching">
+              Teaching
+            </h3>
+            <!-- <span style="color: #33A6B8;"><b>Course</b></span> -->
+            <b>Courses</b>
+            <ul>
+              <li><b>Boston College</b>, <a href="https://miayuanai.github.io/csci3345/s25/" target="_blank">CSCI3345: Machine Learning</a>, <i>Spring 2025</i> [<a href="https://miayuanai.github.io/csci3345/s25/" target="_blank"><b>Course Website</b></a>]</li>
+              <li><b>Boston College</b>, <a href="https://miayuanai.github.io/csci3370/f24/" target="_blank">CSCI3370: Deep Learning</a>, <i>Fall 2024</i> [<a href="https://miayuanai.github.io/csci3370/f24/" target="_blank"><b>Course Website</b></a>]</li>
+              <li><b>Boston College</b>, <a href="https://miayuanai.github.io/csci3399/s24/" target="_blank">CSCI3399: Vision and Learning</a>, <i>Spring 2024</i> [<a href="https://miayuanai.github.io/csci3399/s24/" target="_blank"><b>Course Website</b></a>]</li>
+            </ul>
+
+              <b>Lectures</b>
+            <ul>
+              <li><b>Hong Kong Polytechnic University</b>, COMP5511 Artificial Intelligence Concepts, Guest Lecture, <i>Fall 2023</i></li>
+              <li><b>Nanyang Technology University</b>, Deep Generative Modeling, Teaching Seminar, <i>May 2023</i></li>
+              <li><b>New York University</b>, <a href="http://bulletin.engineering.nyu.edu/preview_course_nopop.php?catoid=15&coid=38006" target="_blank">ROB-UY 3203 Robot Vision</a>, Guest Lecture, <i>Spring 2023</i></li>
+            </ul>
+
+              <b>Teaching Assistant</b>
+            <ul>
+              <li><b>HKUST</b>, EESM5547 -- Multimedia Signal Processing, Teaching Assistant, <i>Fall 2014</i></li>
+              <li><b>HKUST</b>, ELEC1200 -- A System View of Communications: from Signals to Packets, Teaching Assistant, <i>Fall 2013</i></li>
+              <li><b>HKUST</b>, ELEC1200 -- A System View of Communications: from Signals to Packets, Teaching Assistant, <i>Spring 2012</i></li>
+            </ul>
+
+
+
+            <h3 id="services">
+              Academic Services
+            </h3>
+            <ul>
+              <li><b>Workshop Committee</b></li>
+              Organizing committee of ICLR workshop, Machine Learning for IoT: Datasets, Perception, and Understanding, 2023 <a href="https://iclr.cc/virtual/2023/workshop/12835" target="_blank">[<b>Workshop</b>]</a> <a href="https://sites.google.com/eng.ucsd.edu/mliot/" target="_blank">[<b>Website</b>]</a> <br>
+              PC Member of workshop on Learning with Limited Labelled Data for Image and Video Understanding, CVPR, 2022 <br>
+              PC Member of the International Conference on Learning Representations (ICLR) workshop, PAIR^2Struct, 2022 <br>
+              PC Member of the IEEE International Conference on Computer Vision (ICCV) workshop, the first workshop on statistic deep learning in computer vision, 2019 <br>
+              
+              <li><b>Conference Program Committee Member/Reviewer:</b></li>
+              IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, 2018, 2019, 2020, 2021, 2022, 2023 <br>
+              IEEE International Conference on Computer Vision (ICCV), 2017, 2019, 2021, 2023 <br>
+              International Conference on Machine Learning (ICML), 2021, 2022, 2023 <br>
+              Neural Information Processing Systems (NeurIPS), 2020, 2021, 2022, 2023, 2024 <br>
+              International Conference on Learning Representations (ICLR), 2022, 2023, 2024, 2025 <br>
+	            European Conference on Computer Vision (ECCV), 2020, 2022, 2024 <br>
+              International Conference on Artificial Intelligence and Statistics (AISTATS), 2025 <br>
+              Annual Meeting of the Association for Computational Linguistics (ACL), 2021 <br>
+              AAAI Conference on Artificial Intelligence (AAAI), 2019, 2020, 2021 <br>
+              Winter Conference on Applications of Computer Vision (WACV), 2022, 2023 <br>
+              International Joint Conferences on Artificial Intelligence (IJCAI), 2017 <br>
+
+              <li><b>Journal Reviewer</b></li>
+              IEEE Transactions on Image Processing (TIP) <br>
+              IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) <br>
+              IEEE Transactions on Multimedia (TMM) <br>
+              IEEE Transactions on Neural Networks and Learning Systems (TNNLS) <br>
+
+            </ul>
+
+
+
+            <h3 id="miscellaneous">
+              Selected Honors and Awards
+            </h3>
+            <ul>
+              <li>Rising Stars in AI Symposium 2023 at KAUST, 2023. (Being selected to give a talk, but unable to attend in person due to visa issues)</li>
+              <li>2022 Top Ten Notable Advances in Medicine, Nature Medicine, 2022. <a href="https://www.nature.com/articles/s41591-022-02146-x" target="_blank">[<b>Link</b>]</a></li>
+              <li>Ali Star, Alibaba Group, 2019.</li>
+              <li>Research Travel Grant, CMU, ICCV 2017.</li>
+              <li>Overseas Research Award for conducting research at Carnegie Mellon University, HKUST, 2016.</li>
+              <li>Research Travel Grant, HKUST, 2014, 2015, 2017.</li>
+              <li>Meritorious Winner, Mathematical Contest in Modeling of America (MCM), 2011.</li>
+              <li>Microsoft Young Fellowship, Microsoft Research Asia, 2011.</li>
+              <li>National Scholarship (top 0.2%, <em class="red">highest</em> honor), Ministry of Education of P.R.China, 2009, 2010, 2011.</li>
+              <li>Merit Scholarship (top 0.05%, <em class="red">highest</em> honor), HUST, 2011</li>
+              <li>First-Class Scholarship (top 5%), HUST, 2009, 2010, 2011</li>
+            </ul>
+
+
+
+            
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container">
+      <br><hr>
+      <div class="row" style="text-align: center">
+        © 2020-2024 Yuan Yuan. Last updated: Oct 15, 2024.
+      </div>
     </footer>
+  </section>
 
-    <script src="script.js"></script>
+
+  <script>
+
+    var $hashList = $('.menu-list a'), offsetList, maxScrollHeight;
+
+    $('#sidebar').on('click', 'a', function(){
+      activate($(this))
+    });
+    
+    $(window).on('resize', debounce(calculateBoundary, 300));
+
+    $(document).on('scroll', debounce(judgeScroll, 300));
+
+    calculateBoundary();
+    judgeScroll();
+    
+    function  calculateBoundary() {
+      offsetList = $hashList.map(function(idx, ele){
+        return $(ele.hash).offset().top
+      });
+      maxScrollHeight = $(document).height() - $(window).height()
+    }
+    
+    function judgeScroll() {
+      var tps = $("html").scrollTop()
+              ? $("html").scrollTop()
+              : $("body").scrollTop(),
+              len = offsetList.length;
+      if(tps >= maxScrollHeight-10){
+        activate($hashList.eq(len-1));
+        return
+      }
+      for(var i=0; i<len; i++){
+       if(tps+50<offsetList[i]){
+          activate($hashList.eq(Math.max(0,i-1)));
+          return
+        }
+      }
+    }
+
+    function activate(ele){
+      $hashList.removeClass('is-active');
+      ele.addClass('is-active');
+    }
+
+    function debounce(fn, delay) {
+      var timeout = null;
+      return function () {
+        var args = arguments;
+        var context = this;
+        if (!timeout) {
+          timeout = setTimeout(function () {
+            timeout = 0;
+            return fn.apply(context, args);
+          }, delay);
+        }
+      };
+    }
+
+    var $showMoreBtn = $('.show-more');
+    $showMoreBtn.click(function(){
+      var $parent = $showMoreBtn.parent();
+      if($parent.hasClass('partial-visible')){
+        $showMoreBtn.text('hide').parent().removeClass('partial-visible');
+      }else{
+        $showMoreBtn.text('show more').parent().addClass('partial-visible');
+      }
+    })
+
+    var psbCount = 3;
+    $('#avatar').attr('src', './images/psb'+(1+(Math.random()*100>>0)%psbCount)+'.jpg')
+
+
+
+  </script>
+
+
 </body>
+
 </html>
